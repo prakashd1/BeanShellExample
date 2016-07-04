@@ -1,0 +1,2 @@
+bar= bar*10;
+System.out.println(bar);
