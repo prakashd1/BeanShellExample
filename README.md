@@ -3,5 +3,7 @@
 This program gives example of executing java beanshell using simple example. You can refer to details about beanshell on 
 http://www.beanshell.org/intro.html
 
+how to run this program .. 
+mvn clean install exec:java
 BR,
 Prakash Dayaramani

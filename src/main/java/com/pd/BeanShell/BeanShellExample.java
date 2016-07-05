@@ -14,22 +14,26 @@ public class BeanShellExample {
 
 		Interpreter i = new Interpreter();  // Construct an interpreter
 		i.set("foo", 5);                    // Set variables
-		i.set("date", new Date() ); 
+		i.set("way", 2);
 
-		Date date = (Date)i.get("date");    // retrieve a variable
-
-		// Eval a statement and get the result
+		/*
+		 * There are 3 ways to invoke beanshell 
+		 */
+		// First way :- Using inline evaluation
 		
-		/*String content = new Scanner(new File("./src/main/resources/hello.bsh")).useDelimiter("\\Z").next();
-		System.out.println(content);*/
-		
-		
+		System.out.println("Way of invoking beanshell " + 1);
+		System.out.println("Invoking beanshell using inline evalution");
 		i.eval("bar = foo*10");  
-		
 		System.out.println( i.get("bar") );
-		i.eval(new BufferedReader(new FileReader(new File("./src/main/resources/hello.bsh"))));
-		// Source an external script file
+		System.out.println("--------------------------------");
 		
+		//Second way:- using buffered reader
+		i.eval(new BufferedReader(new FileReader(new File("./src/main/resources/hello.bsh"))));
+
+		
+		
+		// Third way:- Source an external script file
 		i.source("./src/main/resources/hello.bsh");
+		
 	}
 }

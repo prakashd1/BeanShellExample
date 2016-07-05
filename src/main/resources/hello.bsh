@@ -1,2 +1,4 @@
+System.out.println("Way of invoking beanshell " + (way++));
 bar= bar*10;
-System.out.println(bar);
+System.out.println("After multiplying bar by 10 value of bar= " + bar);
+System.out.println("--------------------------------");
